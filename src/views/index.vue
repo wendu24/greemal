@@ -65,9 +65,14 @@ import {
   Location,
   Setting,
 } from "@element-plus/icons-vue";
-
-
+import { useRouter } from 'vue-router';
 import { getCurrentInstance } from 'vue'
+
+ 
+const router = useRouter();
+
+
+
 
 
 const that = getCurrentInstance();
@@ -81,7 +86,7 @@ const handleClose = (key, keyPath) => {
 
 const exitUser=()=>{
   // location.href="/"
-  that.$router.push("/")
+  router.push("/")
 }
 
 </script>

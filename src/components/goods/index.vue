@@ -57,10 +57,10 @@
   
   
   
-  const multipleTableRef = reactive();
-  const selectedGoods = reactive([])
+  const multipleTableRef = ref();
+  const selectedGoods = ref([])
   
-  const goodsSearchForm = reactive({
+  const goodsSearchForm = ref({
     goodsCode: "",
     goodsName: "",
     createTime: "",
@@ -85,7 +85,7 @@
   };
   
   const showDetaiDialog = ref(false);
-  const goodsInfo = reactive({});
+  const goodsInfo = ref({});
   const showDetail = (row) => {
     showDetaiDialog.value = true
     goodsInfo.value = row
@@ -97,7 +97,7 @@
     console.log(showDetaiDialog);
   });
   
-  const tableData = reactive([
+  const tableData = ref([
     {
       orderCode: "TMS12222222",
       goodsName: "格力变频挂机111",

@@ -4,20 +4,20 @@
   <el-dialog v-model="dialogVisible" title="订单详情" width="700" height="500" >
 
     <el-form  :inline="true" :model="orderInfo" class="demo-form-inline">
-      <el-form-item label="订单编号">
-        <el-input v-model="orderInfo.value.orderCode"  disabled />
+      <el-form-item label="订单编号" prop="orderCode">
+        <el-input v-model="orderInfo.orderCode"  disabled />
       </el-form-item>
       
-      <el-form-item label="商品名称">
-        <el-input v-model="orderInfo.value.goodsName" disabled />
+      <el-form-item label="商品名称" prop="goodsName">
+        <el-input v-model="orderInfo.goodsName" disabled />
       </el-form-item>
       
-      <el-form-item label="收货地址">
-        <el-input v-model="orderInfo.value.address" disabled />
+      <el-form-item label="收货地址" prop="address">
+        <el-input v-model="orderInfo.address" disabled />
       </el-form-item>
       
-      <el-form-item label="下单时间">
-        <el-input v-model="orderInfo.value.orderTime" disabled />
+      <el-form-item label="下单时间" prop="orderTime">
+        <el-input v-model="orderInfo.orderTime" disabled />
       </el-form-item>
       
       

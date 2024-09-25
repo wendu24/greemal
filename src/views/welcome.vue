@@ -8,13 +8,21 @@
         <div class="grid-content ep-bg-purple"></div>
       </el-col>
       <el-col :span="4">
-        <div class="grid-content ep-bg-purple"></div>
+        <div class="grid-content ep-bg-purple"><login></login></div>
       </el-col>
       <el-col class="userOp" :span="8">
       </el-col>
     </el-row>
   </div>
 </template>
+
+
+<script setup>
+  import login from './login.vue';
+
+
+
+</script>
 
 <style scoped>
 .header {

@@ -57,10 +57,10 @@ import { listOrders, addOrder } from '@/api/order/order'
 
 
 
-const multipleTableRef = reactive();
-const selectedOrder = reactive([])
+const multipleTableRef = ref();
+const selectedOrder = ref([])
 
-const orderSearchForm = reactive({
+const orderSearchForm = ref({
   orderCode: "",
   goodsName: "",
   orderTime: "",
@@ -85,11 +85,12 @@ const handleSelectionChange = (selection) => {
 };
 
 const showDetaiDialog = ref(false);
-const orderInfo = reactive({});
+const orderInfo = ref({});
 const showDetail = (row) => {
   showDetaiDialog.value = true
   orderInfo.value = row
   console.log(`orderInfo:${orderInfo.value.orderCode}`)
+  console.log(`orderInfo:${orderInfo}`)
 }
 
 watch(() => showDetaiDialog.value, (newValue) => {
@@ -97,7 +98,7 @@ watch(() => showDetaiDialog.value, (newValue) => {
   console.log(showDetaiDialog);
 });
 
-const tableData = reactive([
+const tableData = ref([
   {
     orderCode: "TMS12222222",
     goodsName: "格力变频挂机111",

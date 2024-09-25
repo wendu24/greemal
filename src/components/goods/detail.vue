@@ -4,20 +4,20 @@
     <el-dialog v-model="dialogVisible" title="商品详情" width="700" height="500" >
   
       <el-form  :inline="true" :model="goodsInfo" class="demo-form-inline">
-        <el-form-item label="商品编号">
-          <el-input v-model="goodsInfo.value.goodsName"  disabled />
+        <el-form-item label="商品编号" prop="goodsCode">
+          <el-input v-model="goodsInfo.goodsCode"  disabled />
         </el-form-item>
         
-        <el-form-item label="商品名称">
-          <el-input v-model="goodsInfo.value.goodsName" disabled />
+        <el-form-item label="商品名称" prop="goodsName">
+          <el-input v-model="goodsInfo.goodsName" disabled />
         </el-form-item>
         
-        <el-form-item label="商品价格">
-          <el-input v-model="goodsInfo.value.price" disabled />
+        <el-form-item label="商品价格" prop="price">
+          <el-input v-model="goodsInfo.price" disabled />
         </el-form-item>
         
-        <el-form-item label="新增时间">
-          <el-input v-model="goodsInfo.value.createTime" disabled />
+        <el-form-item label="新增时间" prop="createTime">
+          <el-input v-model="goodsInfo.createTime" disabled />
         </el-form-item>
         
         
